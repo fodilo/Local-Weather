@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Scripts used-->
+  <meta charset="UTF-8">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <title>Weather forecast</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Spectral:200" rel="stylesheet">
+<link href ="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" rel="stylesheet" >
+</head>
+<body>
+  <!-- pane which contains the rest of information-->
+  <div id="pane" class="container card-panel light-blue darken-4 z-depth-4" >
+    <div class="row">
+
+
+    <div id="degree-info" class="col s5">
+      <span id="degree">??</span>
+      <span id="unit">F°</span>
+      <!--button to toggle between celcius and fahrnheit -->
+      <button id="btn-c" class="waves-effect waves-light btn-large" type="button" name="cel-fah" onclick="showConvert()">C/F</button>
+
+    </div>
+    <div id="weather-info" class="col s7">
+
+        <span id="weather-icon" class="wi "></span>
+
+      <span id="weather-state"> <!--contain the weather state :"rainy","snowy"..  and location -->
+        Unknown
+      </span>
+      <span id="location">
+        unknown
+      </span>
+      <button id="btn-f"onclick="getLocation(); getWeatherInfo();" class="waves-effect waves-light btn-large" type="button" name="forecast">Forcast</button>
+
+    </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
